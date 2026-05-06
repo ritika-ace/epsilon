@@ -110,17 +110,6 @@ export async function sendOTP(req: Request, res: Response) {
 
     // Auto-create user if enabled and user doesn't exist
     if (!user && domainConfig?.autoCreateUser) {
-      // Extract name from email or use defaults
-      const emailName = email.split('@')[0];
-      const firstName = emailName.split('.')[0] || "User";
-      const lastName = emailName.split('.')[1] || "";
-      
-      user = await storage.createEmployee({
-        firstName: firstName.charAt(0).toUpperCase() + firstName.slice(1),
-        lastName: lastName.charAt(0).toUpperCase() + lastName.slice(1),
-        email: email,
-        points: domainConfig.defaultPoints || 0,
-      } as any);
       isNewUser = true;
     } else if (!user && !domainConfig?.autoCreateUser) {
       return res.status(404).json({ 

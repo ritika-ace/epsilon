@@ -48,8 +48,7 @@ export function Header() {
   const navLinks = [
     { id: "brand-store", label: "Brand Store", path: "/dashboard" },
     { id: "special-occasions", label: "Special Occasions", path: "/special-occasions" },
-    { id: "bulk-buy", label: "CSR Support", path: "/csr" },
-    { id: "csr-blog", label: "Blog", path: "/blog" },
+   
 
   ];
 

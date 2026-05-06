@@ -64,16 +64,6 @@ export function Footer() {
                   Special Occasions
                 </a>
               </li>
-              <li>
-                <a href="/blog" className="text-gray-600 hover:text-gray-900 transition-colors text-sm">
-                  Blogs
-                </a>
-              </li>
-              <li>
-                <a href="/csr" className="text-gray-600 hover:text-gray-900 transition-colors text-sm">
-                  CSR
-                </a>
-              </li>
             </ul>
           </div>
 
@@ -84,10 +74,10 @@ export function Footer() {
               <div className="flex items-center text-gray-600">
                 <Mail className="mr-3 h-4 w-4" />
                 <a 
-                  href="mailto:support@virtusa.com" 
+                  href="mailto:support@acegiftingsolutions.com" 
                   className="text-sm hover:text-gray-900 transition-colors"
                 >
-                  support@virtusa.com
+                  support@acegiftingsolutions.com
                 </a>
               </div>
               
@@ -104,8 +94,8 @@ export function Footer() {
               &copy; {new Date().getFullYear()} {companyName}. All rights reserved.
             </p>
             <div className="text-gray-600 text-sm">
-              <span>Employee Product Selection Portal | Powered by </span>
-              <span className="font-semibold text-gray-900">BRACKETS</span>
+              <span>Powered by </span>
+              <span className="font-semibold text-gray-900">Evolve</span>
             </div>
           </div>
         </div>

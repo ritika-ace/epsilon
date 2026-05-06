@@ -198,20 +198,6 @@ export default function Login() {
       return;
     }
 
-    if (domainStatus.domain?.autoCreateUser && domainStatus.domain?.canLoginWithoutEmployeeId) {
-      setConfirmEmail(normalizedEmail);
-      setFetchedName({
-        firstName: "",
-        lastName: "",
-        exists: false,
-        domainWhitelisted: true,
-        autoCreate: true,
-        defaultPoints: domainStatus.domain.defaultPoints || 0,
-      });
-      setShowConfirmModal(true);
-      return;
-    }
-
     setConfirmEmail(normalizedEmail);
     setFetchedName(null);
     setShowConfirmModal(true);
@@ -465,6 +451,7 @@ export default function Login() {
         }}
         primaryColor={primary}
         companyName={company}
+        isNewUser={!fetchedName?.exists}
       />
     </div>
   );
